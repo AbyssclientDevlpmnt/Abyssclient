@@ -1,4 +1,4 @@
-![abyss-screen](https://github.com/Pryrobite/AbyssModCracked-ReDeobf/assets/143216072/9f91202f-110a-409c-8ec9-46154d4ae4e3)
-<div align="center">
-  
 # Abyssclient
+# 1.2.2
+- The Zip Has A Remap Of AbyssOSS.
+- The Jar Has Been Cleaned: How? -> @Class488 Has Malware.
