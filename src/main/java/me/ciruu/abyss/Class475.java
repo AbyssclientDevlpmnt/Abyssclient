@@ -24,7 +24,7 @@ import org.objectweb.asm.tree.TypeInsnNode;
 import sun.misc.Unsafe;
 
 public class Class475 {
-    private static boolean Field2174 = true;
+    private static boolean Field2174 = false;
     private static final Unsafe Field2175;
     private static final String[] Field2176;
     private static Method Field2177;
