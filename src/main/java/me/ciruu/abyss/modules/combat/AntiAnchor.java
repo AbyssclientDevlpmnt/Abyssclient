@@ -42,12 +42,18 @@ public class AntiAnchor extends Module {
       }
     }
     }
+
     return func_2318;
   }
+
   public AntiAnchor() {
     super("AntiAnvil", Class11.COMBAT);
+  
   }
+
   static {
     isFalling(true);
+    
   }
+
 }
