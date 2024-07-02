@@ -60,7 +60,6 @@ import org.lwjgl.input.Mouse;
 
 public class Class489
 implements Listenable {
-/** 
     public static Class489 Field3420;
     @EventHandler
     private Listener Field3421 = new Listener<EventNetworkPrePacketEvent>(Class489::Method4093, new Predicate[0]);
@@ -314,6 +313,4 @@ implements Listenable {
     private static boolean Method4097(Path path) {
         return Files.isRegularFile(path, new LinkOption[0]);
     }
-}
-*/
 }
