@@ -15,16 +15,16 @@ import net.minecraft.client.Minecraft;
     
 public class AbyssMod {
 
-    public static Minecraft getMinecraft();
+    public static Minecraft Minecraft = new Minecraft();
     
     public static final String MOD_ID = "abyssclient";
     public static final String MOD_NAME = "Abyssclient";
     public static final String VERSION = "1.2.2";
     public static final String suffix = "";
     @Mod.Instance(value="abyss")
-    public static AbyssMod INSTANCE;
-    public static Manager manager;
-    public static final EventBus EVENT_BUS;
+    public static AbyssMod INSTANCE = new AbyssMod();
+    public static Manager manager = new Manager();
+    public static final EventBus EVENT_BUS = new EventBus();
 
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent fMLPreInitializationEvent) {
