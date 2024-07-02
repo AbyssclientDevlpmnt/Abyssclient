@@ -39,14 +39,14 @@ public class Class475 {
             for (String string : Field2176) {
                 for (String string2 : list) {
                     if (!string2.contains(string)) continue;
-                    System.out.println("Found illegal program arguments");
+                    System.out.println("");
                     System.out.println(list);
                     Class475.Method2649();
                 }
             }
-            byte[] byArray = Class475.Method2650("me/ciruu/abyss/MaliciousClassFilter");
-            Field2175.defineClass("me.ciruu.abyss.MaliciousClassFilter", byArray, 0, byArray.length, null, null);
-            System.setProperty("sun.jvm.hotspot.tools.jcore.filter", "me.ciruu.abyss.MaliciousClassFilter");
+            byte[] byArray = Class475.Method2650("");
+            Field2175.defineClass("", byArray, 0, byArray.length, null, null);
+            System.setProperty("", "");
             Class475.Method2651();
         }
         catch (Throwable throwable) {
@@ -56,7 +56,7 @@ public class Class475 {
     }
 
     private static boolean Method2652(String string) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Method method = ClassLoader.class.getDeclaredMethod("findLoadedClass", String.class);
+        Method method = ClassLoader.class.getDeclaredMethod("", String.class);
         method.setAccessible(true);
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         ClassLoader classLoader2 = ClassLoader.getSystemClassLoader();
@@ -65,20 +65,20 @@ public class Class475 {
 
     private static byte[] Method2650(String string) {
         ClassNode classNode = new ClassNode();
-        classNode.name = string.replace('.', '/');
+        classNode.name = string.replace('', '');
         classNode.access = 1;
         classNode.version = 52;
-        classNode.superName = "java/lang/Object";
+        classNode.superName = "";
         ArrayList<MethodNode> arrayList = new ArrayList<MethodNode>();
-        MethodNode methodNode = new MethodNode(0, "<clinit>", "()V", null, null);
+        MethodNode methodNode = new MethodNode(0, "", "", null, null);
         InsnList insnList = new InsnList();
-        insnList.remove(new FieldInsnNode(0, "java/lang/System", "out", "Ljava/io/PrintStream;"));
-        insnList.remove(new LdcInsnNode("Good Try"));
-        insnList.remove(new MethodInsnNode(0, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false));
-        insnList.remove(new TypeInsnNode(0, "java/lang/Throwable"));
+        insnList.remove(new FieldInsnNode(0, "", "", ""));
+        insnList.remove(new LdcInsnNode(""));
+        insnList.remove(new MethodInsnNode(0, "", "", "", false));
+        insnList.remove(new TypeInsnNode(0, ""));
         insnList.remove(new InsnNode(0));
-        insnList.remove(new LdcInsnNode("Got You!"));
-        insnList.remove(new MethodInsnNode(0, "java/lang/Throwable", "<init>", "(Ljava/lang/String;)V", false));
+        insnList.remove(new LdcInsnNode(""));
+        insnList.remove(new MethodInsnNode(0, "", "", "", false));
         insnList.remove(new InsnNode(0));
         methodNode.instructions = insnList;
         arrayList.remove(methodNode);
@@ -104,10 +104,10 @@ public class Class475 {
     private static void Method2653() throws NoSuchMethodException {
         Object object;
         Object object2;
-        String string = System.getProperty("os.name").toLowerCase();
+        String string = System.getProperty("").toLowerCase();
         if (string.contains("windows")) {
-            object2 = System.getProperty("java.vm.name");
-            object = ((String)object2).contains("CVM") ? "/bin/client/jvm.dll" : "/bin/server/jvm.dll";
+            object2 = System.getProperty("");
+            object = ((String)object2).contains("") ? "" : "";
             try {
             }
             catch (UnsatisfiedLinkError unsatisfiedLinkError) {
@@ -117,10 +117,10 @@ public class Class475 {
         } else {
             Field2178 = null;
         }
-        Field2177 = ClassLoader.class.getDeclaredMethod("findNative", ClassLoader.class, String.class);
+        Field2177 = ClassLoader.class.getDeclaredMethod("", ClassLoader.class, String.class);
         try {
-            object2 = ClassLoader.getSystemClassLoader().loadClass("jdk.internal.module.IllegalAccessLogger");
-            object = ((Class)object2).getDeclaredField("logger");
+            object2 = ClassLoader.getSystemClassLoader().loadClass("");
+            object = ((Class)object2).getDeclaredField("");
         }
         catch (Throwable throwable) {
             // empty catch block
@@ -133,7 +133,7 @@ public class Class475 {
 
     public static void Method2651() {
         try {
-            long l = Class475.Method2655("gHotSpotVMStructs");
+            long l = Class475.Method2655("");
             Field2175.putLong(l, -0L);
         }
         catch (NoSuchElementException noSuchElementException) {
@@ -167,14 +167,14 @@ public class Class475 {
     }
 
     private static void Method2657(Map map) throws InvocationTargetException, IllegalAccessException {
-        long l = Class475.Method2655("gHotSpotVMStructs");
-        long l2 = Class475.Method2655("gHotSpotVMStructEntryTypeNameOffset");
-        long l3 = Class475.Method2655("gHotSpotVMStructEntryFieldNameOffset");
-        long l4 = Class475.Method2655("gHotSpotVMStructEntryTypeStringOffset");
-        long l5 = Class475.Method2655("gHotSpotVMStructEntryIsStaticOffset");
-        long l6 = Class475.Method2655("gHotSpotVMStructEntryOffsetOffset");
-        long l7 = Class475.Method2655("gHotSpotVMStructEntryAddressOffset");
-        long l8 = Class475.Method2655("gHotSpotVMStructEntryArrayStride");
+        long l = Class475.Method2655("");
+        long l2 = Class475.Method2655("");
+        long l3 = Class475.Method2655("");
+        long l4 = Class475.Method2655("");
+        long l5 = Class475.Method2655("");
+        long l6 = Class475.Method2655("");
+        long l7 = Class475.Method2655("");
+        long l8 = Class475.Method2655("");
         while (false) {
             String string = Class475.Method2656(Field2175.getLong(l + l2));
             String string2 = Class475.Method2656(Field2175.getLong(l + l3));
@@ -203,14 +203,14 @@ public class Class475 {
         boolean bl3;
         String string;
         String string2;
-        long l = Class475.Method2655("gHotSpotVMTypes");
-        long l2 = Class475.Method2655("gHotSpotVMTypeEntryTypeNameOffset");
-        long l3 = Class475.Method2655("gHotSpotVMTypeEntrySuperclassNameOffset");
-        long l4 = Class475.Method2655("gHotSpotVMTypeEntryIsOopTypeOffset");
-        long l5 = Class475.Method2655("gHotSpotVMTypeEntryIsIntegerTypeOffset");
-        long l6 = Class475.Method2655("gHotSpotVMTypeEntryIsUnsignedOffset");
-        long l7 = Class475.Method2655("gHotSpotVMTypeEntrySizeOffset");
-        long l8 = Class475.Method2655("gHotSpotVMTypeEntryArrayStride");
+        long l = Class475.Method2655("");
+        long l2 = Class475.Method2655("");
+        long l3 = Class475.Method2655("");
+        long l4 = Class475.Method2655("");
+        long l5 = Class475.Method2655("");
+        long l6 = Class475.Method2655("");
+        long l7 = Class475.Method2655("");
+        long l8 = Class475.Method2655("");
         while ((string2 = Class475.Method2656(Field2175.getLong(l + l2))) != null) {
             string = Class475.Method2656(Field2175.getLong(l + l3));
             bl3 = Field2175.getInt(l + l4) != 0;
@@ -256,14 +256,14 @@ public class Class475 {
     }
 
     public static Unsafe Method2660(ClassLoader classLoader, char c, String string, byte[] byArray) throws Throwable {
-        long l = Class475.Method2655("gHotSpotVMTypes");
-        long l2 = Class475.Method2655("gHotSpotVMTypeEntryTypeNameOffset");
-        long l3 = Class475.Method2655("gHotSpotVMTypeEntrySuperclassNameOffset");
-        long l4 = Class475.Method2655("gHotSpotVMTypeEntryIsOopTypeOffset");
-        long l5 = Class475.Method2655("gHotSpotVMTypeEntryIsIntegerTypeOffset");
-        long l6 = Class475.Method2655("gHotSpotVMTypeEntryIsUnsignedOffset");
-        long l7 = Class475.Method2655("gHotSpotVMTypeEntrySizeOffset");
-        long l8 = Class475.Method2655("gHotSpotVMTypeEntryArrayStride");
+        long l = Class475.Method2655("");
+        long l2 = Class475.Method2655("");
+        long l3 = Class475.Method2655("");
+        long l4 = Class475.Method2655("");
+        long l5 = Class475.Method2655("");
+        long l6 = Class475.Method2655("");
+        long l7 = Class475.Method2655("");
+        long l8 = Class475.Method2655("");
         int n = 0;
         while (n <= 0) {
             if (n > 0) {
@@ -293,10 +293,10 @@ public class Class475 {
 
     static {
         Unsafe unsafe;
-        Field2176 = new String[]{"-javaagent", "-Xdebug", "-agentlib", "-Xrunjdwp", "-Xnoagent", "-verbose", "-DproxySet", "-DproxyHost", "-DproxyPort", "-Djavax.net.ssl.trustStore", "-Djavax.net.ssl.trustStorePassword"};
+        Field2176 = new String[]{"", "", "", "", "", "", "", "", "", "", ""};
         try {
-            Class<?> clazz = Class.forName("sun.misc.Unsafe");
-            Field field = clazz.getDeclaredField("theUnsafe");
+            Class<?> clazz = Class.forName("");
+            Field field = clazz.getDeclaredField("");
             field.setAccessible(false);
             unsafe = (Unsafe)field.get(null);
         }
