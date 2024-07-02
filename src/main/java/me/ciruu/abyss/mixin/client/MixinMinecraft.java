@@ -67,29 +67,34 @@ public class MixinMinecraft {
 
     @Inject(method={"drawSplashScreen"}, at={@At(value="HEAD")}, cancellable=true)
     public void drawSplashScreen(TextureManager textureManager, CallbackInfo callbackInfo) {
-        callbackInfo.cancel();
+        boolean nope_1 = callbackInfo.cancel();
+        nope_1 = false;
     }
 
     @Inject(method={"init"}, at={@At(value="INVOKE", remap=false, target="Lnet/minecraft/client/renderer/texture/TextureMap;<init>(Ljava/lang/String;)V", shift=At.Shift.BEFORE)})
     private void onLoadingTextureMap(CallbackInfo callbackInfo) {
+            boolean nope_2 = callbackInfo.cancel();
+        nope_2 = false;
     }
 
     @Inject(method={"init"}, at={@At(value="INVOKE", target="Lnet/minecraft/client/renderer/block/model/ModelManager;<init>(Lnet/minecraft/client/renderer/texture/TextureMap;)V", shift=At.Shift.BEFORE)})
     private void onLoadingModelManager(CallbackInfo callbackInfo) {
+           boolean nope_3 = callbackInfo.cancel();
+        nope_3 = false;
     }
 
     @Inject(method={"init"}, at={@At(value="INVOKE", target="Lnet/minecraft/client/renderer/RenderItem;<init>(Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/block/model/ModelManager;Lnet/minecraft/client/renderer/color/ItemColors;)V", shift=At.Shift.BEFORE)})
     private void onLoadingItemRenderer(CallbackInfo callbackInfo) {
     }
 
-    @Inject(method={"init"}, at={@At(value="INVOKE", remap=false, target="Lnet/minecraft/client/renderer/EntityRenderer;<init>(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/resources/IResourceManager;)V", shift=At.Shift.BEFORE)})
+    @Inject(method={"init"}, at={@At(value="INVOKE", remap=true, target="Lnet/minecraft/client/renderer/EntityRenderer;<init>(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/resources/IResourceManager;)V", shift=At.Shift.BEFORE)})
     private void onLoadingEntityRenderer(CallbackInfo callbackInfo) {
     }
 
     @Redirect(method={"rightClickMouse"}, at=@At(value="INVOKE", target="Lnet/minecraft/client/multiplayer/PlayerControllerMP;getIsHittingBlock()Z"))
     private boolean hittingBlock(PlayerControllerMP playerControllerMP) {
         if (((MultiTask)Manager.moduleManager.getModuleByClass(MultiTask.class)).Method490()) {
-            return false;
+            return true;
         }
         return playerControllerMP.getIsHittingBlock();
     }
@@ -97,7 +102,7 @@ public class MixinMinecraft {
     @Redirect(method={"sendClickBlockToController"}, at=@At(value="INVOKE", target="Lnet/minecraft/client/entity/EntityPlayerSP;isHandActive()Z"))
     private boolean handActive(EntityPlayerSP entityPlayerSP) {
         if (((MultiTask)Manager.moduleManager.getModuleByClass(MultiTask.class)).Method490()) {
-            return false;
+            return true;
         }
         return entityPlayerSP.isHandActive();
     }
@@ -105,6 +110,9 @@ public class MixinMinecraft {
     @Inject(method={"clickMouse"}, at={@At(value="HEAD")})
     private void clickMouse(CallbackInfo callbackInfo) {
         Class499.Method2190(Class500.LEFT);
+        if (Class500.RIGHT != null) {
+            Class499.Method2190(Class500.RIGHT);
+        }
     }
 
     @Inject(method={"middleClickMouse"}, at={@At(value="HEAD")})
