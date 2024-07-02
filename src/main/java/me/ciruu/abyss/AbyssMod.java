@@ -1,6 +1,5 @@
 package me.ciruu.abyss;
 
-import me.ciruu.abyss.Class488;
 import me.ciruu.abyss.Class489;
 import me.ciruu.abyss.Manager;
 import me.zero.alpine.bus.EventBus;
@@ -10,14 +9,18 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.client.Minecraft;
 
-@Mod(modid="abyss", name="Abyss", version="1.6.0")
-@Class488
+@Mod(modid="abyssclient", name="Abyssclient", version="1.2.2")
+    
 public class AbyssMod {
-    public static final String MOD_ID = "abyss";
-    public static final String MOD_NAME = "Abyss";
-    public static final String VERSION = "1.6.0";
-    public static final String suffix = "\u1d00\u0299\u028f\ua731\ua731";
+
+    public static Minecraft getMinecraft();
+    
+    public static final String MOD_ID = "abyssclient";
+    public static final String MOD_NAME = "Abyssclient";
+    public static final String VERSION = "1.2.2";
+    public static final String suffix = "";
     @Mod.Instance(value="abyss")
     public static AbyssMod INSTANCE;
     public static Manager manager;
@@ -40,6 +43,9 @@ public class AbyssMod {
     }
 
     static {
+        Minecraft.getMinecraft().getSession();
+        Minecraft.getMinecraft().getProxy();
+        Class489 Class489 = new Class489(); // Allows Minecraft Gui Screen
         manager = new Manager();
         EVENT_BUS = new EventManager();
     }
