@@ -41,6 +41,7 @@ public class AntiAnchor extends Module {
         }
       }
     }
+    }
     return func_2318;
   }
   public AntiAnchor() {
