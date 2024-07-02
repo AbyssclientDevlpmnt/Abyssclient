@@ -6,7 +6,8 @@ import net.minecraft.block.BlockAnvil;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.player.EntityPlayer;
-  
+import net.minecraft.util.DamageSource;
+
 public class AntiAnchor extends Module implements BlockFalling, BlockAnvil {
   public static BlockAnvil Field29293 = new BlockAnvil();
   public static AbyssMod Field29351 = new AbyssMod();
@@ -27,7 +28,7 @@ public class AntiAnchor extends Module implements BlockFalling, BlockAnvil {
         try {
           func_2318 = true;
         } catch (BlockFalling IBlockFalling) {
-        
+          Self.damageEntity(Field697163.ANVIL, float_16371);
         }
       }
     }
