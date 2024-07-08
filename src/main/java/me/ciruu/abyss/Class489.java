@@ -62,9 +62,9 @@ public class Class489
 implements Listenable {
     public static Class489 Field3420;
     @EventHandler
-    private Listener Field3421 = new Listener<EventNetworkPrePacketEvent>(Class489::Method4093, new Predicate[0]);
+    public Listener Field3421 = new Listener<EventNetworkPrePacketEvent>(Class489::Method4093, new Predicate[0]);
     @EventHandler
-    private Listener Field3422 = new Listener<EventPlayerUpdate>(Class489::Method4094, 300, new Predicate[0]);
+    public Listener Field3422 = new Listener<EventPlayerUpdate>(Class489::Method4094, 300, new Predicate[0]);
 
     public Class489() {
         Field3420 = this;
@@ -82,7 +82,7 @@ implements Listenable {
         AbyssMod.EVENT_BUS.post(new Class26());
     }
 
-    private void Method4096() {
+    public void Method4096() {
         block6: {
             try {
                 Stream<Path> stream;
@@ -270,11 +270,11 @@ implements Listenable {
         AbyssMod.EVENT_BUS.post(guiOpenEvent);
     }
 
-    private static void Method4094(EventPlayerUpdate eventPlayerUpdate) {
+    public static void Method4094(EventPlayerUpdate eventPlayerUpdate) {
         Manager.Field1643.Method465();
     }
 
-    private static void Method4093(EventNetworkPrePacketEvent eventNetworkPrePacketEvent) {
+    public static void Method4093(EventNetworkPrePacketEvent eventNetworkPrePacketEvent) {
         if (eventNetworkPrePacketEvent.Method49() instanceof SPacketTimeUpdate) {
             Manager.Field1645.Method3656();
         } else if (eventNetworkPrePacketEvent.Method49() instanceof SPacketPlayerListItem && Globals.mc.player != null && Globals.mc.world != null) {
@@ -286,7 +286,7 @@ implements Listenable {
         }
     }
 
-    private static void Method4118(SPacketPlayerListItem sPacketPlayerListItem, SPacketPlayerListItem.AddPlayerData addPlayerData) {
+    public static void Method4118(SPacketPlayerListItem sPacketPlayerListItem, SPacketPlayerListItem.AddPlayerData addPlayerData) {
         UUID uUID = addPlayerData.getProfile().getId();
         switch (sPacketPlayerListItem.getAction()) {
             case ADD_PLAYER: {
@@ -306,11 +306,11 @@ implements Listenable {
         }
     }
 
-    private static boolean Method4117(SPacketPlayerListItem.AddPlayerData addPlayerData) {
+    public  static boolean Method4117(SPacketPlayerListItem.AddPlayerData addPlayerData) {
         return !Strings.isNullOrEmpty(addPlayerData.getProfile().getName()) || addPlayerData.getProfile().getId() != null;
     }
 
-    private static boolean Method4097(Path path) {
+    public static boolean Method4097(Path path) {
         return Files.isRegularFile(path, new LinkOption[0]);
     }
 }
