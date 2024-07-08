@@ -18,7 +18,7 @@ public enum Class128 {
     /*
      * WARNING - void declaration
      */
-    private Class128() {
+    public Class128() {
     }
 
     Class128(Color color, ResourceLocation field1188) {
