@@ -19,7 +19,7 @@ public enum Class11 {
      * WARNING - void declaration
      */
 
-    Class11(String combat, int i) {
+    public Class11(String combat, int i) {
     }
 
     public int getColour() {
