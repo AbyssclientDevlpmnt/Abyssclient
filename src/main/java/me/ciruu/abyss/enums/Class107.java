@@ -21,7 +21,7 @@ public enum Class107 {
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
-    private Class107(int n3) {
+    public Class107(int n3) {
     }
 
     Class107(int i, int i1, int i2) {
