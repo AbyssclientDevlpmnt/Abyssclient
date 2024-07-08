@@ -38,7 +38,7 @@ public class AbyssDecoder {
         return "".getBytes();
     }
 
-    private static int Method3898(char c) {
+    public static int Method3898(char c) {
         if ('0' <= c && c <= '9') {
             return c - 48;
         }
