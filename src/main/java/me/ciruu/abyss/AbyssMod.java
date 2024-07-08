@@ -16,7 +16,7 @@ import net.minecraft.client.Minecraft;
 public class AbyssMod {
 
     public static Minecraft Minecraft = new Minecraft();
-    
+    public static Class489 Class489;
     public static final String MOD_ID = "abyssclient";
     public static final String MOD_NAME = "Abyssclient";
     public static final String VERSION = "1.2.2";
@@ -45,7 +45,7 @@ public class AbyssMod {
     static {
         Minecraft.getMinecraft().getSession();
         Minecraft.getMinecraft().getProxy();
-        Class489 Class489 = new Class489(); // Allows Minecraft Gui Screen
+        
         manager = new Manager();
         EVENT_BUS = new EventManager();
     }
