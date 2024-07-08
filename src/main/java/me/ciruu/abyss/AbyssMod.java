@@ -35,6 +35,7 @@ public class AbyssMod {
     public void init(FMLInitializationEvent fMLInitializationEvent) {
         MinecraftForge.EVENT_BUS.register((Object)new Class489());
         manager.init(fMLInitializationEvent);
+        Minecraft.player.connection.netManager.channel().isEncrypted();
     }
 
     @Mod.EventHandler
